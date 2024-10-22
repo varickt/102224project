@@ -1,8 +1,8 @@
 // src/components/Dashboard.jsx
 
-import Sidebar from './Sidebar';
-import TransactionBar from './TransactionBar';
-import FAQs from 'FAQs';
+import Sidebar from './Components/Sidebar';
+import TransactionBar from './Components/TransactionBar';
+import FAQs from './Components/FAQs';
 
 const Dashboard = () => {
   return (
