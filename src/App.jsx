@@ -1,20 +1,18 @@
 import { useState } from "react";
-import Sidebar from "Sidebar";
-import Navbar from "Navbar";
-import Dashboard from 'Dashboard';
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import Dashboard from "./components/Dashboard";
 
-export default function App() {
-  const [sidebarOpen, setSidebarOpen] = useState(false);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
+function App() {
   return (
-    <div>
-      <Navbar toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={sidebarOpen} />
-      <Dashboard />
+    <div className="app">
+      <Navbar />
+      <div className="app-container">
+        <Sidebar />
+        <Dashboard />
+      </div>
     </div>
   );
 }
+
+export default App;

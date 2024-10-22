@@ -1,14 +1,8 @@
 import { useState } from "react";
 import { Drawer, List, ListItem, ListItemText } from "@mui/material";
 
-// src/components/Sidebar.jsx
-
-const Sidebar = () => {
-    return <div>Sidebar Content</div>;
-  };
-  
-  export default Sidebar;
-  
+export default function Sidebar() {
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Drawer open={isOpen} onClose={() => setIsOpen(false)}>
@@ -25,4 +19,5 @@ const Sidebar = () => {
       </List>
     </Drawer>
   );
+}
 
